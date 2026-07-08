@@ -1,11 +1,9 @@
 import streamlit as st
-import joblib
 import pandas as pd
 import numpy as np
-from catboost import CatBoostClassifier, Pool
+from catboost import CatBoostClassifier
 import shap
 import matplotlib.pyplot as plt
-import seaborn as sns
 
 st.title("Предсказание оттока клиентов")
 
