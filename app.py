@@ -50,7 +50,7 @@ if st.button("Предсказать отток"):
     "IsLoyal": [(tenure > 24) & (contract != "Month-to-month")]
     })
 
-    model = CatBoostClassifier().load_model("C:\\Users\\admin\\anaconda3\\Lib\\churn_model.cbm")
+    model = CatBoostClassifier().load_model("churn_model.cbm")
 
     pred_proba = model.predict_proba(input_data)[:, 1][0]
     
