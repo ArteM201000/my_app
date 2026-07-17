@@ -9,16 +9,16 @@ st.title("Предсказание оттока клиентов")
 
 st.sidebar.title("Введите данные клиента")
 
-contract = st.sidebar.radio("Выберите контракт рабочего:", ["Month-to-month", "One year", "Two year"])
+contract = st.sidebar.radio("Выберите контракт:", ["Month-to-month", "One year", "Two year"])
 internet_service = st.sidebar.radio("Выберите тип интернет-сервиса:", ["DSL", "Fiber optic", "No"])
 monthly_charges = st.sidebar.number_input("Введите ежемесячные расходы:", min_value=0.0, step=0.1, format="%.2f")
 total_charges = st.sidebar.number_input("Введите общие расходы:", min_value=0.0, step=0.05, format="%.6f")
 online_security = st.sidebar.radio("Выберите наличие онлайн-безопасности:", ["Yes", "No", "No internet service"])
 tech_support = st.sidebar.radio("Выберите наличие технической поддержки:", ["Yes", "No", "No internet service"])
 payment_method = st.sidebar.radio("Выберите способ оплаты:", ["Electronic check", "Mailed check", "Bank transfer (automatic)", "Credit card (automatic)"])
-tenure = st.sidebar.number_input("Введите срок работы (в месяцах):", min_value=0, step=1)
-dependents = st.sidebar.radio("Выберите наличие зависимости от работодателя:", ["Yes", "No"])
-senior_citizen = st.sidebar.radio("Выберите, является ли рабочий пожилым:", ["Yes", "No"])
+tenure = st.sidebar.number_input("Введите срок пользования услугами (в месяцах):", min_value=0, step=1)
+dependents = st.sidebar.radio("Выберите наличие зависимости:", ["Yes", "No"])
+senior_citizen = st.sidebar.radio("Выберите, является ли клиент пожилым:", ["Yes", "No"])
 partner = st.sidebar.radio("Выберите наличие партнера:", ["Yes", "No"])
 
 if st.button("Предсказать отток"):
